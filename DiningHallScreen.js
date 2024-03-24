@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, StyleSheet, ImageBackground } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Chips from './Chips';
+import { ChipsContext } from './ChipsContext';
 
 export default function DiningHallScreen({ route }) {
   const { diningHall } = route.params;
+  const [chips] = useContext(ChipsContext); 
   const navigation = useNavigation();
 
   const stations = diningHall.stations;
@@ -34,8 +36,8 @@ export default function DiningHallScreen({ route }) {
             <Text style={styles.dropdownArrow}>{visible[index] ? '▲' : '▼'}</Text>
           </TouchableOpacity>
           {visible[index] && station.foods.map((food, foodIndex) => (
-            <View key={foodIndex} style={styles.foodContainer}>
-              <Text style={styles.foodText}>{food}</Text>
+            <View key={foodIndex} style={[styles.foodContainer, {backgroundColor: food.ingredients && food.ingredients.includes('Milk') && chips.includes('X Milk') ? 'rgba(194, 194, 194, 0.5)' : 'white'}]}>
+              <Text style={styles.foodText}>{food.name}</Text>
             </View>
           ))}
         </View>
@@ -103,4 +105,5 @@ const styles = StyleSheet.create({
   foodText: {
     fontSize: 16,
   },
+  
 });

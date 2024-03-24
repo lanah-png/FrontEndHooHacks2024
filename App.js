@@ -38,9 +38,30 @@ export default function App() {
       image: 'https://branchbuilds.com/wp-content/uploads/2021/09/observatory-hill-03.jpg', 
       Stations: isLoading ? "Loading..." : `${stationsData[0]}`,
       stations: [
-        { name: "The Iron Skillet", foods: ["Cheesburger Mac & Cheese Bowl", "Biscuits & Sausage Gravy", "Grits"] },
-        { name: "Copper Hood", foods: ["Black Beans & Rice with Bacon", "Green Chili Calabacitas", "Fresh Food Salad"] },
-        { name: "Trattoria - Pizza", foods: ["Southwest Ham Breakfast Pizza", "Classic Cheese Pizza", "Pepperonin Pizza"] },
+        { 
+          name: "The Iron Skillet", 
+          foods: [
+            { name: "Cheeseburger Mac & Cheese Bowl", ingredients: ["Cheese", "Macaroni", "Beef", "Milk"] },
+            { name: "Biscuits & Sausage Gravy", ingredients: ["Biscuits", "Sausage", "Gravy"] },
+            { name: "Grits", ingredients: ["Grits", "Milk"] }
+          ]
+        },
+        { 
+          name: "Copper Hood", 
+          foods: [
+            { name: "Black Beans & Rice with Bacon", ingredients: ["Black Beans", "Rice", "Bacon"] },
+            { name: "Green Chili Calabacitas", ingredients: ["Green Chili", "Calabacitas"] },
+            { name: "Fresh Food Salad", ingredients: ["Lettuce", "Tomatoes", "Cucumbers", "Carrots"] }
+          ]
+        },
+        { 
+          name: "Trattoria - Pizza", 
+          foods: [
+            { name: "Southwest Ham Breakfast Pizza", ingredients: ["Ham", "Cheese", "Pizza Dough", "Milk"] },
+            { name: "Classic Cheese Pizza", ingredients: ["Cheese", "Pizza Dough", "Tomato Sauce", "Milk"] },
+            { name: "Pepperoni Pizza", ingredients: ["Pepperoni", "Cheese", "Pizza Dough", "Tomato Sauce", "Milk"] }
+          ]
+        },
       ]
     },
     { 
