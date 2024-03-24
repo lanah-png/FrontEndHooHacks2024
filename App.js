@@ -48,9 +48,9 @@ export default function App() {
       image: 'https://www.coleanddenny.com/wp-content/uploads/2020/07/HDPhoto_130723_07_FS1.jpg', 
       Stations: isLoading ? "Loading..." : `${stationsData[1]}`,
       stations: [
-        { name: "Station 1", foods: ["Food Item 1", "Food Item 2", "Food Item 3"] },
-        { name: "Station 2", foods: ["Food Item 4", "Food Item 5", "Food Item 6"] },
-        { name: "Station 3", foods: ["Food Item 7", "Food Item 8", "Food Item 9"] },
+        { name: "Entree", foods: ["Chicken Fried Beef Steak & Gravy", "Egg & Cheese Muffin", "Scrambled Eggs"] },
+        { name: "Copper Hood", foods: ["Pork Sausage Patty", "Turkey Bacon", "Fried Just Egg"] },
+        { name: "Pizza", foods: ["Classic Cheese Pizza  ", "Pepperoni Pizza"] },
       ]
     },
     { 
@@ -58,9 +58,9 @@ export default function App() {
       image: 'https://tipton-associates.com/wp-content/uploads/2020/09/RunkDiningHall_Img1.jpg', 
       Stations: isLoading ? "Loading..." : `${stationsData[2]}`,
       stations: [
-        { name: "Station 1", foods: ["Food Item 1", "Food Item 2", "Food Item 3"] },
-        { name: "Station 2", foods: ["Food Item 4", "Food Item 5", "Food Item 6"] },
-        { name: "Station 3", foods: ["Food Item 7", "Food Item 8", "Food Item 9"] },
+        { name: "Copper Hood", foods: ["Beef & Potato Curry ", "Yellow Basmati Rice ", "Ginger Green Beans"] },
+        { name: "Entree", foods: ["Buttermilk Pancakes ", "Seasoned Scrambled Eggs", "Pork Sausage Links"] },
+        { name: "Street Food Grill", foods: ["Chopped Fresh Spinach", "Diced Fresh Green Peppers", "Diced Red Peppers "] },
       ]
     },
   ];
